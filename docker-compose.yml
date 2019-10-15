@@ -1,0 +1,27 @@
+version: '3'
+services: 
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes: 
+      - .:/var/www/html
+
+  db:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports: 
+      - 81:80
+    environment:
+      - PMA_HOST=db
+    depends_on: 
+      - db
+
+  mailhog:
+    image: mailhog/mailhog
+    ports: 
+      - 1025:1025
