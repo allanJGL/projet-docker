@@ -3,7 +3,7 @@
 docker-compose up --build
 
 A bubble sorting code is in the index.php 
-Why ? Ask Lapinou :
+Why ? Ask Lapinou :  
 `(\___/)`  
 `(='.'-)`
 `(")-(")`
